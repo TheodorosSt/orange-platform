@@ -15,7 +15,9 @@ export default function PremiumButton({
   isLoading = false,
   className = '',
   disabled,
-  ...props
+  onClick,
+  type,
+  style,
 }: PremiumButtonProps) {
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -35,7 +37,9 @@ export default function PremiumButton({
       whileTap={{ scale: 0.98 }}
       className={`font-sans font-semibold transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className} ${disabled || isLoading ? 'opacity-60 cursor-not-allowed' : ''}`}
       disabled={disabled || isLoading}
-      {...props}
+      onClick={onClick}
+      type={type}
+      style={style}
     >
       {isLoading ? (
         <span className="flex items-center gap-2">

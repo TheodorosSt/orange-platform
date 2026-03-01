@@ -14,7 +14,7 @@ export default function AudiobookPanel({ text }: AudiobookPanelProps) {
 
   useEffect(() => {
     fetchVoices();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (voices.length > 0 && !selectedVoice) {

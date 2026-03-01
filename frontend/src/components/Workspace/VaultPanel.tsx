@@ -8,7 +8,7 @@ export default function VaultPanel() {
 
   useEffect(() => {
     loadDocuments();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const filtered = documents.filter((d) =>
     d.name.toLowerCase().includes(search.toLowerCase())

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.32 1417.32">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#785723"/>
+      <stop offset="30%" style="stop-color:#bf913a"/>
+      <stop offset="60%" style="stop-color:#dad395"/>
+      <stop offset="100%" style="stop-color:#b28636"/>
+    </linearGradient>
+  </defs>
+  <rect width="1417.32" height="1417.32" fill="none"/>
+  <path d="M200 900 Q200 400 708.66 350 Q1217.32 400 1217.32 900 L1217.32 950 Q708.66 980 200 950 Z" fill="none" stroke="url(#gold-grad)" stroke-width="28"/>
+  <line x1="708.66" y1="360" x2="708.66" y2="950" stroke="url(#gold-grad)" stroke-width="20"/>
+  <rect x="320" y="600" width="60" height="200" rx="8" fill="url(#gold-grad)"/>
+  <rect x="420" y="520" width="60" height="280" rx="8" fill="url(#gold-grad)"/>
+  <rect x="520" y="560" width="60" height="240" rx="8" fill="url(#gold-grad)"/>
+  <rect x="620" y="480" width="60" height="320" rx="8" fill="url(#gold-grad)"/>
+  <rect x="760" y="540" width="60" height="260" rx="8" fill="url(#gold-grad)"/>
+  <rect x="860" y="590" width="60" height="210" rx="8" fill="url(#gold-grad)"/>
+  <rect x="960" y="510" width="60" height="290" rx="8" fill="url(#gold-grad)"/>
+  <rect x="1060" y="570" width="60" height="230" rx="8" fill="url(#gold-grad)"/>
+</svg>

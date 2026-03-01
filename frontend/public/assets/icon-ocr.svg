@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.32 1417.32">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#785723"/>
+      <stop offset="30%" style="stop-color:#bf913a"/>
+      <stop offset="60%" style="stop-color:#dad395"/>
+      <stop offset="100%" style="stop-color:#b28636"/>
+    </linearGradient>
+  </defs>
+  <rect width="1417.32" height="1417.32" fill="none"/>
+  <rect x="320" y="250" width="580" height="720" rx="40" fill="none" stroke="url(#gold-grad)" stroke-width="28"/>
+  <line x1="390" y1="450" x2="830" y2="450" stroke="url(#gold-grad)" stroke-width="20" stroke-linecap="round"/>
+  <line x1="390" y1="530" x2="760" y2="530" stroke="url(#gold-grad)" stroke-width="20" stroke-linecap="round"/>
+  <line x1="390" y1="610" x2="800" y2="610" stroke="url(#gold-grad)" stroke-width="20" stroke-linecap="round"/>
+  <line x1="390" y1="690" x2="720" y2="690" stroke="url(#gold-grad)" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="1000" cy="700" r="200" fill="none" stroke="url(#gold-grad)" stroke-width="28"/>
+  <line x1="1000" y1="540" x2="1000" y2="860" stroke="url(#gold-grad)" stroke-width="24" stroke-linecap="round"/>
+  <line x1="840" y1="700" x2="1160" y2="700" stroke="url(#gold-grad)" stroke-width="24" stroke-linecap="round"/>
+  <polygon points="604.81,1200 720,1100 604.81,1130 490,1100" fill="url(#gold-grad)" opacity="0.5"/>
+</svg>

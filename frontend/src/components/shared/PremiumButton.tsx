@@ -35,7 +35,7 @@ export default function PremiumButton({
       whileTap={{ scale: 0.98 }}
       className={`font-sans font-semibold transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className} ${disabled || isLoading ? 'opacity-60 cursor-not-allowed' : ''}`}
       disabled={disabled || isLoading}
-      {...(props as object)}
+      {...props}
     >
       {isLoading ? (
         <span className="flex items-center gap-2">

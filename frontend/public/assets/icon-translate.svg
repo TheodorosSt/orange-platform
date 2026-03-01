@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.32 1417.32">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#785723"/>
+      <stop offset="30%" style="stop-color:#bf913a"/>
+      <stop offset="60%" style="stop-color:#dad395"/>
+      <stop offset="100%" style="stop-color:#b28636"/>
+    </linearGradient>
+  </defs>
+  <rect width="1417.32" height="1417.32" fill="none"/>
+  <text x="320" y="680" font-family="serif" font-size="380" font-weight="700" fill="url(#gold-grad)">A</text>
+  <text x="740" y="820" font-family="serif" font-size="280" font-weight="700" fill="url(#gold-grad)" opacity="0.8">文</text>
+  <line x1="630" y1="900" x2="750" y2="900" stroke="url(#gold-grad)" stroke-width="20" stroke-linecap="round"/>
+  <polygon points="780,900 750,880 750,920" fill="url(#gold-grad)"/>
+  <line x1="630" y1="960" x2="750" y2="960" stroke="url(#gold-grad)" stroke-width="20" stroke-linecap="round"/>
+  <polygon points="600,960 630,940 630,980" fill="url(#gold-grad)"/>
+</svg>

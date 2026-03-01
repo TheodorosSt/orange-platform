@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1209.62 858.91">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#785723"/>
+      <stop offset="30%" style="stop-color:#bf913a"/>
+      <stop offset="60%" style="stop-color:#dad395"/>
+      <stop offset="100%" style="stop-color:#b28636"/>
+    </linearGradient>
+  </defs>
+  <rect width="1209.62" height="858.91" fill="#1a1714"/>
+  <text x="604.81" y="480" font-family="'Playfair Display', serif" font-size="220" font-weight="700" fill="url(#gold-grad)" text-anchor="middle" letter-spacing="40">ORANGE</text>
+  <text x="604.81" y="580" font-family="Inter, sans-serif" font-size="48" fill="#a09888" text-anchor="middle" letter-spacing="12">PREMIUM DIGITAL SERVICES</text>
+  <polygon points="604.81,120 680,260 604.81,220 530,260" fill="url(#gold-grad)" opacity="0.8"/>
+</svg>

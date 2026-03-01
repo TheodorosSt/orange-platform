@@ -38,7 +38,7 @@ class Settings(BaseSettings):
 
     # App
     debug: bool = False
-    allowed_origins: str = "http://localhost:5173"
+    allowed_origins: str = "http://localhost:5173,http://localhost:3000"
 
     @property
     def cors_origins(self) -> list[str]:

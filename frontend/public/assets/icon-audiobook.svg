@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.32 1417.32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="170 320 1080 690">
   <defs>
     <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#785723"/>
@@ -7,7 +7,6 @@
       <stop offset="100%" style="stop-color:#b28636"/>
     </linearGradient>
   </defs>
-  <rect width="1417.32" height="1417.32" fill="none"/>
   <path d="M200 900 Q200 400 708.66 350 Q1217.32 400 1217.32 900 L1217.32 950 Q708.66 980 200 950 Z" fill="none" stroke="url(#gold-grad)" stroke-width="28"/>
   <line x1="708.66" y1="360" x2="708.66" y2="950" stroke="url(#gold-grad)" stroke-width="20"/>
   <rect x="320" y="600" width="60" height="200" rx="8" fill="url(#gold-grad)"/>

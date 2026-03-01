@@ -17,7 +17,7 @@ export default function ServiceTile({ service, onClick }: ServiceTileProps) {
       <motion.img
         src={service.icon}
         alt={service.label}
-        className="w-24 h-24 object-contain"
+        className="w-14 h-14 object-contain"
         whileHover={{ rotate: 5 }}
         transition={{ type: 'spring', stiffness: 300 }}
       />

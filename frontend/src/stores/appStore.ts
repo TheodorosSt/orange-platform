@@ -31,7 +31,7 @@ export const useAppStore = create<AppState>((set) => ({
         ...state.notifications,
         {
           ...notification,
-          id: Math.random().toString(36).slice(2),
+          id: crypto.randomUUID(),
           timestamp: Date.now(),
         },
       ],

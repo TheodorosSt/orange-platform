@@ -13,7 +13,7 @@ interface AuthState {
   signUp: (email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
-  initialize: () => Promise<void>;
+  initialize: () => Promise<() => void>;
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
@@ -75,12 +75,14 @@ export const useAuthStore = create<AuthState>((set) => ({
     } else {
       set({ isLoading: false });
     }
-    supabaseClient.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabaseClient.auth.onAuthStateChange((_event, session) => {
       if (session?.user) {
         set({ user: { id: session.user.id, email: session.user.email!, created_at: session.user.created_at } });
       } else {
         set({ user: null });
       }
     });
+    // Return unsubscribe so callers can clean up (e.g. in useEffect)
+    return () => subscription.unsubscribe();
   },
 }));

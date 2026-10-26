@@ -1,10 +1,11 @@
 from __future__ import annotations
 
-import uuid
 import time
+import uuid
 from typing import Any
 
 from celery import Celery  # type: ignore
+
 from app.config import settings
 
 celery_app = Celery(

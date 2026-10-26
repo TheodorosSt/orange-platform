@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import io
-import time
 import uuid
 
 from fastapi import APIRouter, Depends
@@ -48,8 +47,8 @@ async def generate_preview(
 ) -> AudiobookResult:
     # Limit preview to first 200 chars
     preview_text = req.text[:200]
-    audio_bytes = await elevenlabs_service.generate_speech(preview_text, req.voice_id)
-    # In production, upload to storage and return URL
+    # Preview storage is not yet implemented; do not bill for generated audio that is discarded.
+    # In production, generate and upload the preview, then return its storage URL.
     return AudiobookResult(
         audio_url="",  # Would be storage URL in production
         duration_seconds=round(len(preview_text.split()) / 150 * 60, 2),

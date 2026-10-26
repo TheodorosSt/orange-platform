@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import cast
+
 from supabase import Client, create_client  # type: ignore
 
 from app.config import settings
@@ -42,7 +44,7 @@ async def upload_file(
         )
         .execute()
     )
-    return record.data[0]
+    return cast(dict, record.data[0])
 
 
 async def list_documents(user_id: str, page: int = 1, limit: int = 20) -> dict:
@@ -71,7 +73,7 @@ async def get_download_url(document_id: str, user_id: str) -> str:
     )
     path = doc.data["storage_path"]
     response = client.storage.from_(BUCKET_NAME).create_signed_url(path, expires_in=3600)
-    return response["signedURL"]
+    return cast(str, response["signedURL"])
 
 
 async def delete_document(document_id: str, user_id: str) -> None:

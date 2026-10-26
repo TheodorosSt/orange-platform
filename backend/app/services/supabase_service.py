@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from supabase import create_client, Client  # type: ignore
+from supabase import Client, create_client  # type: ignore
+
 from app.config import settings
 
 BUCKET_NAME = "orange-vault"

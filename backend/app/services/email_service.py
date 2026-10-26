@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import resend  # type: ignore
+
 from app.config import settings
 
 resend.api_key = settings.resend_api_key

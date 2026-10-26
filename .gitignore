@@ -11,3 +11,21 @@ __pycache__/
 *.egg-info/
 credentials/
 .DS_Store
+
+# Additional local secrets and private key material
+.env.*
+!.env.example
+!.env.*.example
+env.local
+env.production
+env.production.local
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*service-account*.json
+*service_account*.json
+*.db
+*.sqlite3
+*.log

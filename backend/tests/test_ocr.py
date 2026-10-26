@@ -1,28 +1,25 @@
 from __future__ import annotations
 
+from unittest.mock import MagicMock, patch
+
 import pytest
-from unittest.mock import AsyncMock, MagicMock, patch
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.middleware.auth import get_current_user
 from app.models.schemas import CurrentUser
 
 # Mock the auth dependency globally
 def mock_current_user() -> CurrentUser:
     return CurrentUser(id="test-user-id", email="test@example.com")
 
-app.dependency_overrides = {}
-
-
 @pytest.fixture
 def client():
-    with patch("app.middleware.auth.get_current_user", return_value=mock_current_user()):
-        from app.routers.ocr import router
-        from fastapi import Depends
-        # Override dependency for tests
-        app.dependency_overrides[__import__("app.middleware.auth", fromlist=["get_current_user"]).get_current_user] = mock_current_user
+    app.dependency_overrides[get_current_user] = mock_current_user
+    try:
         yield TestClient(app)
-    app.dependency_overrides.clear()
+    finally:
+        app.dependency_overrides.clear()
 
 
 @pytest.mark.asyncio
@@ -56,10 +53,7 @@ async def test_extract_text_with_vision_mock():
     mock_client = MagicMock()
     mock_client.document_text_detection.return_value = mock_response
 
-    with patch("app.services.google_vision.vision") as mock_vision:
-        mock_vision.ImageAnnotatorClient.return_value = mock_client
-        mock_vision.Image = MagicMock
-        mock_vision.ImageContext = MagicMock
+    with patch("google.cloud.vision.ImageAnnotatorClient", return_value=mock_client):
 
         from app.services import google_vision
         result = await google_vision.extract_text_from_image(b"image-bytes", ["el"])
@@ -79,10 +73,7 @@ async def test_extract_text_google_vision_error():
     mock_client = MagicMock()
     mock_client.document_text_detection.return_value = mock_response
 
-    with patch("app.services.google_vision.vision") as mock_vision:
-        mock_vision.ImageAnnotatorClient.return_value = mock_client
-        mock_vision.Image = MagicMock
-        mock_vision.ImageContext = MagicMock
+    with patch("google.cloud.vision.ImageAnnotatorClient", return_value=mock_client):
 
         from app.services import google_vision
         with pytest.raises(RuntimeError, match="Google Vision error"):

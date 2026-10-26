@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import stripe  # type: ignore
+
 from app.config import settings
 from app.models.schemas import Plan
 

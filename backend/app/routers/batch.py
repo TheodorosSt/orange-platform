@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, File, UploadFile
 
 from app.middleware.auth import get_current_user
-from app.models.schemas import BatchJob, BatchStartRequest, CurrentUser
+from app.models.schemas import BatchJob, CurrentUser
 from app.services import batch_service
 
 router = APIRouter(prefix="/api/batch", tags=["batch"])

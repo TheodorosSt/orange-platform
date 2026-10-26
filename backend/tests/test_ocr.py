@@ -9,6 +9,7 @@ from app.main import app
 from app.middleware.auth import get_current_user
 from app.models.schemas import CurrentUser
 
+
 # Mock the auth dependency globally
 def mock_current_user() -> CurrentUser:
     return CurrentUser(id="test-user-id", email="test@example.com")

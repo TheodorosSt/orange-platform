@@ -78,8 +78,7 @@ async def test_create_checkout_session():
 def test_webhook_event_construction():
     """Test Stripe webhook event construction."""
     with patch("app.services.billing_service.stripe") as mock_stripe:
-        mock_event = MagicMock()
-        mock_event["type"] = "checkout.session.completed"
+        mock_event = {"type": "checkout.session.completed"}
         mock_stripe.Webhook.construct_event.return_value = mock_event
 
         from app.services.billing_service import construct_webhook_event

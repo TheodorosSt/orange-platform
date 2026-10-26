@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import cast
+
 import httpx
 
 from app.config import settings
@@ -35,7 +37,7 @@ async def generate_speech(
             json=payload,
         )
         resp.raise_for_status()
-        return resp.content
+        return cast(bytes, resp.content)
 
 
 async def list_voices() -> list[dict]:

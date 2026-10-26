@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import httpx
+
 from app.config import settings
 
 ELEVENLABS_BASE_URL = "https://api.elevenlabs.io/v1"

@@ -20,7 +20,7 @@ export default function AudiobookPanel({ text }: AudiobookPanelProps) {
     if (voices.length > 0 && !selectedVoice) {
       setSelectedVoice(voices[0].voice_id);
     }
-  }, [voices]);
+  }, [voices, selectedVoice]);
 
   const bars = Array.from({ length: 80 }, (_, i) => {
     const height = 20 + Math.abs(Math.sin(i * 0.3) * 30 + Math.cos(i * 0.7) * 20);

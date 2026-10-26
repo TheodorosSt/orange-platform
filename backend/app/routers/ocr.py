@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, File, UploadFile
 
 from app.middleware.auth import get_current_user
-from app.models.schemas import CurrentUser, OCRRequest, OCRResult
+from app.models.schemas import CurrentUser, OCRResult
 from app.services import google_vision
 
 router = APIRouter(prefix="/api/ocr", tags=["ocr"])

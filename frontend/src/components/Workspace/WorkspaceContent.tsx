@@ -5,7 +5,6 @@ import SourcePanel from './SourcePanel';
 import EditorPanel from './EditorPanel';
 import AudiobookPanel from './AudiobookPanel';
 import VaultPanel from './VaultPanel';
-import BatchPanel from './BatchPanel';
 import { useState } from 'react';
 
 export default function WorkspaceContent() {
